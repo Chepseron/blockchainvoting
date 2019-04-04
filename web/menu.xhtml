@@ -1,0 +1,25 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+
+      xmlns:p="http://primefaces.org/ui"
+      >
+
+    <f:view contentType="text/html">
+        <h:form>
+            <p:menu style="width: auto">  
+                <p:submenu >
+                    <p:menuitem value="Home" url="homePage.xhtml"/>
+                    <p:menuitem value="vote" url="voterPage.xhtml"  rendered = "#{vote.vote}"/>
+                    <p:menuitem value="Results" url="resultsPage.xhtml"/>
+                    <p:menuitem value="Blockchain Equivalent" url="blockchain.xhtml"   rendered = "#{vote.admin}"/>
+                    <p:menuitem value="Settings" url="settings.xhtml"   rendered = "#{vote.admin}"/>
+                    <p:menuitem value="Comments" url="comment.xhtml"/>
+                    <p:menuitem value="Your calendar" url="calendar.xhtml"/>
+                    <p:menuitem value="Logout" action="#{vote.logout}"/>
+                </p:submenu>
+            </p:menu>
+        </h:form>
+    </f:view>
+</html>
